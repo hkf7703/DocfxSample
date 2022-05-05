@@ -1,0 +1,73 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          // "**/*.md",
+          // "**/*.yml"
+          "**/markdown编写技巧指南.md"
+        ]
+      }
+    ],
+    // "resource": [
+    //   {
+    //     "files": [
+    //       "**/images/**"
+    //     ]
+    //   }
+    // ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "研发文档编写指南",
+      "_appFooter": "Shanghai Weihong Electronic Technology Co., Ltd.",
+      "_disableBreadcrumb":"false",
+      "_disableToc":false,
+      "_disableAffix":false,
+      "_enableSearch": true
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+      ,"custom_template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "dfm",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  },
+  "pdf": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+         "**/srs2/toc.yml"
+        ]
+      }
+     
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**"
+        ]
+      }
+    ],
+    "template": [
+      "pdf.default"
+      ,"custom_template"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "dfm",
+    "wkhtmltopdf":{
+      "additionalArguments":"--enable-local-file-access --enable-javascript --javascript-delay 10000"
+    },
+    "dest": "_site_pdf",
+    "excludeDefaultToc": true
+  }
+}
