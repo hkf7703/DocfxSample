@@ -1,4 +1,4 @@
-name: Example documentation
+name: docfx
 
 on:
   push:
